@@ -54,7 +54,12 @@ function MainComponent() {
 
   return (
     <div className='bg-black  p-[20px] h-[600px] w-[370px] rounded-2xl absolute right-[40%]'>
-          <input type="text" className=' font-mono p-2 w-[300px] h-[30px] m-3 absolute right-[0.9rem] top-1.05 bg-black border-b-2 border-white/25 text-white/60 focus:outline-none ' placeholder='Search with your place...' onChange={handleValue} value={value} onKeyDown={handleApiFunction}/>
+          <input 
+            type="text" 
+            className='font-mono p-2 w-full max-w-[300px] h-[30px] m-3 absolute right-[0.9rem] top-1.05 bg-black border-b-2 border-white/25 text-white/60 focus:outline-none sm:text-sm md:text-base lg:text-lg' 
+            placeholder='Search with your place...' 
+            onChange={handleValue} value={value} onKeyDown={handleApiFunction}
+          />
 
           {!value ? <FontAwesomeIcon icon={faSearch} className='absolute right-10 top-10 cursor-pointer text-white/25' /> : <FontAwesomeIcon icon={faXmark}  className='absolute right-10 top-10 cursor-pointer text-white/25'onClick={handleCross}/>}
       <div>
