@@ -33,6 +33,7 @@ function MainComponent() {
   const handleValue = (e)=>{
     dispatch(actions.addValue(e.target.value));
     dispatch(apiActions.clearError());
+    dispatch(apiActions.clearValues());
   }
 
   const handleCross = ()=>{
